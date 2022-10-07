@@ -1,7 +1,7 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
-import "../../assets/css/styleku.css";
 import imgRegister from "../../assets/img/movie.png";
+import "../../assets/css/styleku.css";
+import { useNavigate } from "react-router-dom";
 
 function Index() {
   const navigate = useNavigate();
@@ -29,25 +29,13 @@ function Index() {
                     <form>
                       <div class="form-outline mb-4">
                         <label class="form-label" for="form2Example11">
-                          Nama Lengkap
-                        </label>
-                        <input
-                          type="text"
-                          id="form2Example11"
-                          class="form-control"
-                          placeholder="contoh: frans bachtiar"
-                        />
-                      </div>
-
-                      <div class="form-outline mb-4">
-                        <label class="form-label" for="form2Example11">
                           Username
                         </label>
                         <input
                           type="email"
                           id="form2Example11"
                           class="form-control"
-                          placeholder="contoh: frans@gmail.com"
+                          placeholder="Phone number or email address"
                         />
                       </div>
 
@@ -73,16 +61,16 @@ function Index() {
                       </div>
 
                       <div class="d-flex align-items-center justify-content-center pb-4">
-                        <p class="mb-0 me-2">Already have an account?</p>
+                        <p class="mb-0 me-2">Don't have an account?</p>
                         <button
                           type="button"
                           class="control-create"
                           onClick={(e) => {
                             e.preventDefault();
-                            navigate("/login");
+                            navigate("/register");
                           }}
                         >
-                          Sing in here
+                          Create new
                         </button>
                       </div>
                     </form>

@@ -37,6 +37,25 @@ html {
   border: 1px solid #ff1e1e;
 }
 
+.pencarian {
+  width: 300px;
+  height: 35px;
+}
+
+.pencarian input {
+  background: transparent;
+  border-radius: 20px;
+}
+
+.pencarian input:focus {
+  background: transparent;
+  color: white;
+}
+
+.pencarian input::placeholder {
+  color: #fff;
+}
+
 .fa-search {
   line-height: 5px;
 }
@@ -71,31 +90,87 @@ html {
 }
 
 /* Home */
-.owl-carousel {
-  width: 100%;
-  height: 100vh;
-}
-
-.slide {
-  width: 100%;
-  height: 100vh;
-  position: relative;
-  background-size: cover;
+.caraousel {
+  height: 420px;
   background-repeat: no-repeat;
-  background-position: center center;
-}
+  background-position: center;
+  background-size: cover;
+  margin-bottom: 20px;
+  position: relative;
 
-.slide::before {
+  z-index: 10;
+}
+.caraousel::after {
   content: "";
   position: absolute;
-  top: 0;
+  /* background: rgba(23, 12, 44, 0.7); */
+  background-image: linear-gradient(
+    to top,
+    rgb(15 15 40) 50px,
+    rgba(31, 31, 31, 0.4) 50%
+  );
+  height: inherit;
+  width: inherit;
   left: 0;
-  width: 100%;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
 }
 
-.slide-1 {
+.control-caraousel {
+  color: #fff;
+  z-index: 1000;
+  position: absolute;
+  width: 60%;
+  bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  padding-left: 50px !important;
+  text-align: left;
+  font-family: "Roboto", sans-serif;
+}
+.control-caraousel h3 {
+  font-size: 2.5rem;
+  font-family: "Ubuntu";
+  font-weight: 700;
+}
+.nav p {
+  color: #ced2d6;
+  font-size: 14px;
+  font-weight: 100 !important;
+  line-height: 1.3em;
+  font-family: sans-serif;
+}
+
+.watching-btn button {
+  background: white;
+  border: none;
+  border-radius: 12px;
+  height: 40px;
+  font-family: "Ubuntu";
+  font-weight: bold;
+  width: 110px;
+  color: #ff1e1e;
+  font-size: 11px;
+}
+.watching-btn p {
+  padding-top: 6px;
+  color: #abb7c4;
+  font-weight: 100 !important;
+}
+.watching-btn button:hover {
+  background: #ff1e1e;
+  border: 1px solid transparent;
+  color: #fff;
+}
+
+.disableButtonsControls {
+  position: absolute;
+  top: 0;
+}
+
+/* .slide-1 {
   background-image: url(../img/7430.jpg);
 }
 .slide-2 {
@@ -103,7 +178,7 @@ html {
 }
 .slide-3 {
   background-image: url(../img/7430.jpg);
-}
+} */
 
 .slide-content {
   position: absolute;
@@ -225,11 +300,166 @@ html {
 }
 
 /* login */
+
 .gradient-custom-2 {
-  background-image: url(../img/7430.jpg);
+  background: #fc466b; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #3f5efb,
+    #fc466b
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #3f5efb,
+    #fc466b
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.gradientButton button {
+  background-color: #ff1e1e;
+  border: 1px solid #ff1e1e;
+}
+
+.gradientButton button:hover {
+  background: #ff1e1e;
+  color: #fff;
+}
+
+.font-control-login-1 h4 {
+  font-size: 25px;
+  font-family: "ubuntu";
+  font-weight: bold;
+  color: #fc466b;
+}
+
+.form-control {
+  border: 1px solid #fc466b;
+}
+
+.carding {
+  border: 2px solid;
+  border-image-slice: 1;
+}
+
+.carding-bow {
+  border-image-source: linear-gradient(to right, #fc466b, #3f5efb);
+}
+
+.login-control {
+  background-color: #fff;
+  color: #fc466b;
+  width: 50px;
+  height: 25px;
+  border-radius: 5px;
+  border: 1px solid #fc466b;
+}
+.login-control:hover {
+  color: #fff;
+  background: #fc466b; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #3f5efb,
+    #fc466b
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #3f5efb,
+    #fc466b
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.control-create {
+  background: #fff;
+  color: #fc466b;
+  border: 1px solid #fc466b;
+  width: 70px;
+  height: 25px;
+  border-radius: 5px;
+}
+
+.control-create:hover {
+  color: #fff;
+  background: #fc466b; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #3f5efb,
+    #fc466b
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #3f5efb,
+    #fc466b
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.font-movie-login h4 {
+  color: #fff;
+  font-size: 40px;
+  font-family: "ubuntu";
+  font-weight: bold;
+  font-style: normal;
+}
+/* control scroll */
+
+::-webkit-scrollbar {
+  width: 16px;
+}
+
+::-webkit-scrollbar-track {
+  background: #485461;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to right, #a50010, #b31f2f);
+  border-radius: 150px;
+}
+
+/* control movie all */
+#movie-all {
   height: auto;
   position: relative;
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url(../img/spiderman.jpg);
+}
+
+.margin-control {
+  padding: 35px;
+}
+
+/* detail */
+.bg-detail {
+  position: absolute;
+  top: 180px;
+  background: rgba(31, 31, 31, 0.4);
+}
+
+.carousel-caption {
+  position: absolute;
+  left: 70px;
+  top: 70px;
+}
+
+.bg-detail h1 {
+  font-size: 50px;
+  font-weight: bold;
+}
+
+#search-id {
+  height: auto;
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background: url(../img/spiderman.jpg);
+}
+
+.control-title-search {
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+  font-family: "Ubuntu";
 }
 
 @media only screen and (max-width: 1200px) {
@@ -246,12 +476,43 @@ html {
     top: 20px;
     right: 55px;
   }
+
+  .pencarian {
+    margin-top: 8px;
+    position: absolute;
+    left: 5px;
+  }
+
+  .react {
+    margin-top: 50px;
+    position: absolute;
+    left: 5px;
+  }
 }
+
+/* control detail */
 
 @media only screen and (max-width: 768px) {
   /* home */
   .slide-content button {
     width: 100px;
+  }
+  /* searching */
+  .pencarian {
+    margin-top: 8px;
+    position: absolute;
+    left: 5px;
+  }
+
+  .react {
+    position: absolute;
+    left: 5px;
+    margin-top: 50px;
+  }
+
+  /* login and register */
+  .gradient-custom-2 {
+    visibility: hidden;
   }
 }
 
@@ -259,6 +520,8 @@ html {
   /* navbar */
   .pencarian {
     margin-top: 8px;
+    position: absolute;
+    left: 5px;
   }
   .pencarian button {
     background: #ff1e1e;
@@ -267,7 +530,7 @@ html {
     background: #ff1e1e;
   }
   .react {
-    margin-top: 20px;
+    margin-top: 50px;
   }
 
   /* home */
@@ -285,11 +548,21 @@ html {
     width: 98%;
     height: 98%;
   }
+
+  /* register and login */
+  .gradient-custom-2 {
+    visibility: hidden;
+  }
 }
 
 @media only screen and (max-width: 480px) {
   .text-Popular h1 {
     font-size: 30px;
     margin-top: 5px;
+  }
+
+  /* register and login */
+  .gradient-custom-2 {
+    visibility: hidden;
   }
 }

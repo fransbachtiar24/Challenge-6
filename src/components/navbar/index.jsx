@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../../assets/css/styleku.css";
 import { Outlet, useNavigate } from "react-router-dom";
 
 function Index() {
+  const [search, setSearch] = useState();
   const navigate = useNavigate();
 
   return (
@@ -32,14 +33,28 @@ function Index() {
                 type="search"
                 placeholder="Search"
                 aria-label="Search"
+                onChange={(e) => setSearch(e.target.value)}
               />
               {/* https://react-slick.neostack.com/ */}
-              <button type="submit" className="btn btn-danger">
+              <button
+                className="btn btn-danger"
+                onClick={(e) => {
+                  e.preventDefault();
+                  navigate(`/search?p=${search}`);
+                }}
+              >
                 <i className="fa fa-search"></i>
               </button>
             </form>
             <div className="ms-1 react">
-              <button type="submit" className="login">
+              <button
+                type="submit"
+                className="login"
+                onClick={(e) => {
+                  e.preventDefault();
+                  navigate("/login");
+                }}
+              >
                 Login
               </button>
               <button
