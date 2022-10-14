@@ -301,103 +301,77 @@ html {
 
 /* login */
 
-.gradient-custom-2 {
-  background: #fc466b; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #3f5efb,
-    #fc466b
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #3f5efb,
-    #fc466b
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+#loginTmd {
+  background-image: url(../img/spiderman.jpg);
+  background-size: cover;
 }
 
-.gradientButton button {
-  background-color: #ff1e1e;
-  border: 1px solid #ff1e1e;
+.fa-envelope {
+  position: absolute;
+  top: 120px;
+  right: 50px;
+  color: #485461;
 }
 
-.gradientButton button:hover {
-  background: #ff1e1e;
-  color: #fff;
+.form-control-lg {
+  border-radius: 15px;
 }
 
-.font-control-login-1 h4 {
-  font-size: 25px;
-  font-family: "ubuntu";
-  font-weight: bold;
-  color: #fc466b;
+.fa-eye {
+  position: absolute;
+  top: 177px;
+  right: 50px;
+  color: #485461;
+  cursor: pointer;
 }
 
-.form-control {
-  border: 1px solid #fc466b;
-}
-
-.carding {
-  border: 2px solid;
-  border-image-slice: 1;
-}
-
-.carding-bow {
-  border-image-source: linear-gradient(to right, #fc466b, #3f5efb);
-}
-
-.login-control {
-  background-color: #fff;
-  color: #fc466b;
+.btn-login {
   width: 50px;
   height: 25px;
-  border-radius: 5px;
-  border: 1px solid #fc466b;
-}
-.login-control:hover {
-  color: #fff;
-  background: #fc466b; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #3f5efb,
-    #fc466b
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #3f5efb,
-    #fc466b
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  border-radius: 10px;
+  color: white;
+  background: #ff1e1e;
+  border: none;
 }
 
-.control-create {
-  background: #fff;
-  color: #fc466b;
-  border: 1px solid #fc466b;
-  width: 70px;
-  height: 25px;
-  border-radius: 5px;
+.btn-login:hover {
+  color: white;
+  background: #485461;
+  cursor: pointer;
 }
 
-.control-create:hover {
-  color: #fff;
-  background: #fc466b; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #3f5efb,
-    #fc466b
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #3f5efb,
-    #fc466b
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+.log-in {
+  color: #485461;
 }
 
-.font-movie-login h4 {
-  color: #fff;
-  font-size: 40px;
-  font-family: "ubuntu";
-  font-weight: bold;
-  font-style: normal;
+.fa-close {
+  color: #485461;
+  cursor: pointer;
+}
+
+/* register */
+.fa-user {
+  position: absolute;
+  top: 176px;
+  right: 50px;
+  color: #485461;
+}
+
+.first-nama {
+  position: absolute;
+  top: 120px;
+}
+
+.mail {
+  top: 230px;
+}
+
+.pw {
+  top: 286px;
+}
+
+.pw-2 {
+  top: 340px;
 }
 /* control scroll */
 
