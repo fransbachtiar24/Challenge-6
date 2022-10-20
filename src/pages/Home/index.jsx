@@ -7,7 +7,7 @@ import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
 import { useNavigate } from "react-router-dom";
 
-const pageSize = 4;
+const pageSize = 8;
 
 function Index() {
   // state
