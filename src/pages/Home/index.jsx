@@ -21,7 +21,7 @@ function Index() {
   const movieData = async () => {
     try {
       const response = await axios.get(
-        "https:api.themoviedb.org/3/movie/popular?api_key=dfda61e62b2db392ce66bedf62adc71c&language=en-US&page=1"
+        "https://api.themoviedb.org/3/movie/popular?api_key=dfda61e62b2db392ce66bedf62adc71c&language=en-US&page=1"
       );
       console.log(response.data);
       setMovie(response.data.results);
